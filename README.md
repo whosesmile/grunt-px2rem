@@ -60,7 +60,7 @@ $(window).on('resize', function () {
 }).triggerHandler('resize');
 ```
 
-**In browser, the smallest font-size is 6px, It means some times if you set the root too small, It maybe not work normally when the screen change too small.**
+**In browser, the smallest font-size is 6px, It means if you set the root too small, font-size  wont work when the screen change too small.**
 
 ###Important
 ---
