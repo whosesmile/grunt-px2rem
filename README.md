@@ -60,4 +60,4 @@ $(window).on('resize', function () {
 
 ###Important
 ---
-**background-size and background-position also will be convert to rem, but it's wrong, so in your files, you should use css font relace sprite.**
+*background-size and background-position also will be convert to rem, but it's wrong, so in your files, you should use css font relace sprite.*
