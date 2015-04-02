@@ -1,7 +1,7 @@
 {
   "name": "grunt-px2rem",
   "description": "Convert px to rem for mobile html5 page",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/smilelegend/px2rem",
   "author": {
     "name": "whosesmile",
