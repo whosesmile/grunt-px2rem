@@ -49,7 +49,7 @@ grunt.initConfig({
 
 ### Attention
 ---
-You should use js listen window resize event to change th html font-size, for example in zepto or jquery:
+If you use rem to fit every screen size, You should use javascript to add window resize event, then change th html font-size, for example in zepto or jquery:
 
 ```javascript
 $(window).on('resize', function () {
