@@ -1,0 +1,41 @@
+{
+  "name": "grunt-px2rem",
+  "description": "Convert px to rem for mobile html5 page",
+  "version": "0.1.0",
+  "homepage": "https://github.com/smilelegend/px2rem",
+  "author": {
+    "name": "whosesmile",
+    "email": "lovemoon@yeah.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/smilelegend/px2rem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smilelegend/px2rem/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/smilelegend/px2rem/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
