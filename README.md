@@ -46,3 +46,14 @@ grunt.initConfig({
   },
 });
 ```
+
+### Attention
+---
+You should use js listen window resize event to change th html font-size, for example in zepto or jquery:
+
+```javascript
+$(window).on('resize', function () {
+  var width = Math.min(document.documentElement.clientWidth, 640); // in my page, I limit it to 640
+  $('html').css('font-size', width / 640 * 32 + 'px');
+}).triggerHandler('resize');
+```
