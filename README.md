@@ -30,7 +30,7 @@ grunt.initConfig({
       ignore1: true, // ignore 1px default true
       root: 32 // set root fontsize, default 32
     },
-    css: {
+    css: { // seperate
       files: [{
         expand: true, // Enable dynamic expansion
         cwd: 'src/css', // Src matches are relative to this path
@@ -38,7 +38,7 @@ grunt.initConfig({
         dest: 'dest/css' // Destination path prefix
       }]
     },
-    combin: {
+    combin: { // concat all and convert
       src: ['src/css/a.css', 'src/css/b.css'],
       dest: 'dest/css/all.css'
     }
