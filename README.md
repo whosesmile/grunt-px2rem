@@ -30,7 +30,7 @@ grunt.initConfig({
       ignore1: true, // ignore 1px default true
       root: 32 // set root fontsize, default 32
     },
-    css: {
+    css: { // seperate
       files: [{
         expand: true, // Enable dynamic expansion
         cwd: 'src/css', // Src matches are relative to this path
@@ -38,7 +38,7 @@ grunt.initConfig({
         dest: 'dest/css' // Destination path prefix
       }]
     },
-    combin: {
+    combin: { // concat all and convert
       src: ['src/css/a.css', 'src/css/b.css'],
       dest: 'dest/css/all.css'
     }
@@ -46,3 +46,22 @@ grunt.initConfig({
   },
 });
 ```
+
+### Attention
+---
+If you want to use rem to fit variety screen size, You should addEventListener to window resize, and change the html font-size, for example: 
+
+*(use zepto or jquery)*
+
+```javascript
+$(window).on('resize', function () {
+  var width = Math.min(document.documentElement.clientWidth, 640); // in my page, I limit it to 640
+  $('html').css('font-size', width / 640 * 32 + 'px');
+}).triggerHandler('resize');
+```
+
+**In browser, the smallest font-size is 6px, It means if you set the root too small, font-size  wont work when the screen change too small.**
+
+###Important
+---
+*background-size and background-position also will be convert to rem, but it's wrong, so in your files, you should use css-font relace css-sprite.*
