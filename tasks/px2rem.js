@@ -39,14 +39,15 @@ module.exports = function (grunt) {
 
       var sources = src.map(function (filepath) {
         return grunt.file.read(filepath);
-      }).join('\n').replace(/\b\d+px\b/ig, function (match) {
+      }).join('\n').replace(/\b\d+(\.\d+)?px\b/ig, function (match) {
         if (options.ignore0 && '0px' === match.toLowerCase()) {
           return match;
         }
         if (options.ignore1 && '1px' === match.toLowerCase()) {
           return match;
         }
-        return parseInt(match) / parseInt(options.root, 10) + 'rem';
+        return parseInt(match) / parseFloat(options.root, 10) + 'rem';
+        // return (750/640 * parseInt(match, 10)) + 'px';
       });
 
       // Write the destination file.
